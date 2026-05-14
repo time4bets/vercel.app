@@ -1,0 +1,14 @@
+{
+  "source": "time4bets-rewritten-fourth-version",
+  "version": "fifth global rewrite",
+  "changes": [
+    "all EN pages rewritten again",
+    "all AR pages rewritten again",
+    "section order changed again on content pages",
+    "existing images reused only",
+    "redirect page preserved",
+    "no extra responsive webp variants were added"
+  ],
+  "broken_links_found": [],
+  "broken_links_count": 0
+}
