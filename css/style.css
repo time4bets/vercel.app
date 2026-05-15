@@ -140,3 +140,95 @@
     max-width:100%!important;
   }
 }
+
+/* === Final image/content layout patch === */
+.home-hero .hero-bg img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center center!important;
+}
+.home-hero .hero-bg::after{
+  background:linear-gradient(90deg,rgba(7,20,14,.96) 0%,rgba(7,20,14,.86) 42%,rgba(7,20,14,.48) 72%,rgba(7,20,14,.32) 100%)!important;
+}
+.home-hero .hero-inner{max-width:660px!important;}
+.page-hero.hero-text-only{
+  min-height:330px!important;
+  background:radial-gradient(circle at top right,rgba(0,200,150,.13),transparent 34%),linear-gradient(135deg,#07140e 0%,#0b1e15 55%,#07140e 100%)!important;
+  border-bottom:1px solid var(--border)!important;
+}
+.page-hero.hero-text-only .page-hero-inner{max-width:880px!important;}
+.page-hero.hero-text-only .page-hero-bg{display:none!important;}
+.section-img-placeholder{
+  height:auto!important;
+  min-height:0!important;
+  aspect-ratio:auto!important;
+  padding:0!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  overflow:hidden!important;
+  background:linear-gradient(135deg,#0b1e15,#0f2419)!important;
+}
+.img-section img,
+.section-img,
+.section-img-placeholder img{
+  width:100%!important;
+  height:auto!important;
+  max-width:100%!important;
+  max-height:620px!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  border-radius:var(--radius-lg)!important;
+}
+.section-img-placeholder img[src$="app-screenshot.webp"]{
+  width:auto!important;
+  max-width:78%!important;
+  max-height:640px!important;
+  margin:0 auto!important;
+}
+.section-img-placeholder img[src$="live-casino.webp"],
+.section-img-placeholder img[src$="promotions-banner.webp"],
+.section-img-placeholder img[src$="welcome-bonus.webp"],
+.section-img-placeholder img[src$="withdrawal-methods.webp"]{
+  width:100%!important;
+  max-height:none!important;
+}
+.game-thumb img{
+  object-fit:contain!important;
+  object-position:center!important;
+}
+.extra-info-section{background:var(--bg-primary)!important;}
+.info-copy{
+  max-width:930px;
+  margin:0 auto;
+  padding:34px 36px;
+  background:linear-gradient(135deg,rgba(15,36,25,.92),rgba(11,30,21,.92));
+  border:1px solid var(--border);
+  border-radius:var(--radius-lg);
+  box-shadow:0 12px 34px rgba(0,0,0,.28);
+}
+.info-copy .section-title{text-align:left;margin-bottom:18px;}
+body[dir="rtl"] .info-copy .section-title{text-align:right;}
+.info-copy p{
+  color:var(--text-secondary);
+  font-size:15px;
+  line-height:1.85;
+  margin:0 0 16px;
+}
+.info-copy p:last-child{margin-bottom:0;}
+@media (max-width:900px){
+  .home-hero{min-height:520px!important;}
+  .home-hero .hero-bg img{object-position:center center!important;opacity:.65!important;}
+  .home-hero .hero-bg::after{background:linear-gradient(180deg,rgba(7,20,14,.93),rgba(7,20,14,.9))!important;}
+  .section-img-placeholder img[src$="app-screenshot.webp"]{max-width:88%!important;max-height:540px!important;}
+  .info-copy{padding:26px 22px;}
+}
+@media (max-width:700px){
+  .home-hero{min-height:auto!important;}
+  .home-hero .hero-inner{padding:64px 0!important;}
+  .img-section,.img-section.reverse,body[dir="rtl"] .img-section,body[dir="rtl"] .img-section.reverse{grid-template-columns:1fr!important;gap:28px!important;direction:ltr!important;}
+  body[dir="rtl"] .img-section .section-content{text-align:right;direction:rtl;}
+  .section-img-placeholder img[src$="app-screenshot.webp"]{max-width:76%!important;max-height:500px!important;}
+  .section-img-placeholder img,.img-section img,.section-img{max-height:none!important;}
+}
